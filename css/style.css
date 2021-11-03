@@ -28,6 +28,10 @@ li {
     list-style-type: none;
 }
 
+.flex {
+    display: flex;
+}
+
 /* COMMONS */
 
 /* MAIN */
@@ -39,6 +43,9 @@ main {
 }
 
 .col.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 10%;
     height: 100%;
     background-color: violet;
@@ -48,19 +55,136 @@ main {
     width: 90%;
     height: 100%;
     background-color: blue;
+    overflow-y: scroll;
 }
 
-.header-main {
+.col-right-header {
     background-color: orange;
     height: 100px;
 }
+
+/* COL-LEFT-TOP */
+
+.menu-side.top img {
+    width: 20%;
+    vertical-align: middle;
+}
+
+/* COL-LEFT-TOP */
+
+/* PLAYLIST */
+
+.title-playlist {
+    text-transform: uppercase;
+}
+
+.playlist-menu .add-playlist i {
+    background: white;
+    font-size: 1.5em;
+    padding: 0.2em;
+    vertical-align: middle;
+}
+
+.playlists li {
+    margin: 0.5em 0;
+}
+
+/* PLAYLIST */
+
+/* COL-LEFT-BOTTOM */
+
+.col-left-bottom .install-app img {
+    width: 15%;
+    vertical-align: middle;
+}
+
+.col-left-bottom .install-app hr {
+    border-color: red;
+}
+
+.col-left-bottom .name-artist img {
+    width: 20%;
+    background-color: grey;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* COL-LEFT-BOTTOM */
+
+/* UPGRATE-BUTTON */
+    
+.upgrate-btn {
+    position: fixed;
+    top: 1.5em;
+    right: 0;
+    background-color: transparent;
+    border-radius: 500px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em 2em;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+/* UPGRATE-BUTTON */
+
+/* COL-RIGHT */
+
+.navbar-col-right {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-col-right li {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.card {
+    margin: 0.5em;
+}
+
+.card .card-img {
+    position: relative;
+}
+
+.card .card-img img {
+    width: 100%;
+}
+
+.card .text-card {
+    text-align: center;
+}
+
+.fas.fa-play {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);padding: 0.2em;
+    font-size: 2em;
+    color: white;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.card .card-img:hover img {
+    opacity: 0.5;
+}
+
+.card .card-img:hover .fas.fa-play {
+    display: block;
+}
+/* COL-RIGHT */
     
 /* MAIN */
 
 /* FOOTER */
+
 footer {
     height: 100px;
 }
+
 /* FOOTER */
 
 /* NAVBAR */

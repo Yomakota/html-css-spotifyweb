@@ -9,6 +9,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -17,52 +20,304 @@
         <main>
             <div class="col left">
 
-                <div class="logo">
-
-                </div>
-                <ul class="menu-side top">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="playlist-menu">
-                    <div class="title-playlist"></div>
-                    <div class="add-playlist"></div>
-                    <ul class="playlists">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                <div class="col-left-top">
+                    
+                    <div class="logo">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <ul class="menu-side top">
+                        <li>
+                            <img src="img/home.svg" alt="">
+                            <span>
+                                Home
+                            </span>
+                        </li>
+                        <li>
+                            <img src="img/search.svg" alt="">
+                            <span>
+                                Cerca
+                            </span>
+                        </li>
+                        <li>
+                            <img src="img/libreria.svg" alt="">
+                            <span>
+                                La tua libreria
+                            </span>
+                        </li>
                     </ul>
+                    <div class="playlist-menu">
+                        <div class="title-playlist">
+                            <h2>
+                                playlist
+                            </h2>
+                        </div>
+                        <div class="add-playlist">
+                            <i class="fas fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </div>
+                        <ul class="playlists">
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
                 </div>
-                 <div class="menu-side-bottom">
-                    <div class="install-app"></div>
-                    <div class="name-artist"></div>
+
+                <div class="col-left-bottom">
+                    <div class="install-app">
+                        <img src="img/download.svg" alt="">
+                        <span>Installa app</span>
+                        <hr>
+                    </div>
+                    <div class="name-artist">
+                        <img src="img/profile.svg" alt="">
+                        <span>
+                            Jonh Doe
+                        </span>
+                    </div>
                 </div>
             </div>
 
             <div class="col right">
-                <div class="header-main">
-                    <div class="upgrate-btn">
-    
-                    </div>
+                <div class="col-right-header">
+                    <button class="upgrate-btn">
+                         effettua l'upgrate
+                    </button>
                 </div>
-                <div class="menu-main">
+
+                <div class="navbar-col-right">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>In evidenza</li>
+                        <li>podcast</li>
+                        <li>classifiche</li>
+                        <li>generi e mood</li>
+                        <li>nuove uscite</li>
+                        <li>scopri</li>
                     </ul>
                 </div>
-                <div class="recently-played"></div>
-                <div class="create-for"></div>
-                <div class="popular-artist"></div>
+                <div class="recently-played">
+                    <h1>
+                        Recently played
+                    </h1>
+                    <ul class="flex">
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recently-played">
+                    <h1>
+                        Recently played
+                    </h1>
+                    <ul class="flex">
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recently-played">
+                    <h1>
+                        Recently played
+                    </h1>
+                    <ul class="flex">
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="card-img">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <i class="fas fa-play"></i>
+                            </div>
+                
+                            <div class="text-card">
+                                <h3>Heavy Metal</h3>
+                                <span>Subtitle</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
         <footer>
