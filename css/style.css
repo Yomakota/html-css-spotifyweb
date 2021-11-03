@@ -1,0 +1,70 @@
+/* COMMONS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --bg-color-main: #141922;
+    --menu-left-color:#000000;
+    --navbar-color:#202020;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* COMMONS */
+
+/* MAIN */
+
+main {
+    display: flex;
+    height: calc(100% - 100px);               
+    background-color: yellow;
+}
+
+.col.left {
+    width: 10%;
+    height: 100%;
+    background-color: violet;
+}
+
+.col.right {
+    width: 90%;
+    height: 100%;
+    background-color: blue;
+}
+
+.header-main {
+    background-color: orange;
+    height: 100px;
+}
+    
+/* MAIN */
+
+/* FOOTER */
+footer {
+    height: 100px;
+}
+/* FOOTER */
+
+/* NAVBAR */
+
+/* NAVBAR */
+
+
