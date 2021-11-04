@@ -262,59 +262,11 @@ footer {
     border-radius: 5px;
 }
 
-/* .fas.fa-play {
-    color: white;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 1em;
-    padding: 0.5em;
-} */
-/* NAVBAR */
-
-
-/* footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: strech;
-  height: var(--footer-height);
-}
-footer .footer-menu {
-  display: flex;
-  align-items: center;
-  height: 100%;
+.nav-right {
+    display: flex; 
+    justify-content: space-around;  
 }
 
-footer .footer-menu li {
-  display: flex;
-  margin: 5px;
+.nav-right .minutes {
+    width: 70%;
 }
-footer .footer-menu li:hover {
-  background-color: var(--button-bg-color);
-  border-radius: 5px;
-}
-footer .footer-menu li.doble-btn .btn:first-child {
-  margin: 0 10px 0 0;
-}
-footer .btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-footer .btn:hover,
-footer .btn:active,
-footer .btn:focus {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-footer .btn.green i {
-  color: var(--button-active-color);
-}
-footer .btn.red {
-  height: 100%;
-  background-color: var(--button-bg-color);
-  color: red;
-}
-footer .footer-right {
-  flex-shrink: 0;
-} */
