@@ -47,8 +47,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 10%;
-    height: 100%;
+    height:100%;
     background-color: violet;
+    overflow-y: scroll;
 }
 
 .col.right {
@@ -117,6 +118,7 @@ main {
     position: fixed;
     top: 1.5em;
     right: 0;
+    z-index: 1;
     background-color: transparent;
     border-radius: 500px;
     color: #fff;
@@ -130,12 +132,12 @@ main {
 
 /* COL-RIGHT */
 
-.navbar-col-right {
+.nav-col-right {
     text-align: center;
     text-transform: uppercase;
 }
 
-.navbar-col-right li {
+.nav-col-right li {
     display: inline-block;
     margin: 0.5em;
 }
@@ -156,23 +158,21 @@ main {
     text-align: center;
 }
 
-.fas.fa-play {
+.far.fa-play-circle.over {
     display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);padding: 0.2em;
-    font-size: 2em;
+    font-size: 3em;
     color: white;
-    border: 5px solid white;
-    border-radius: 50%;
 }
 
 .card .card-img:hover img {
     opacity: 0.5;
 }
 
-.card .card-img:hover .fas.fa-play {
+.card .card-img:hover .far.fa-play-circle.over {
     display: block;
 }
 /* COL-RIGHT */
@@ -184,11 +184,137 @@ main {
 footer {
     height: 100px;
 }
-
 /* FOOTER */
 
 /* NAVBAR */
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    height: 100%;
+    align-items: center;
+}
+
+.navbar-left, .navbar-right {
+    width: 20%;
+    border: 1px solid black;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-left-btn {
+    display: flex;
+    padding: 1em;
+}
+
+.navbar .navbar-left .img {
+    width: 30%;
+}
+
+.img img {
+    width:100%;
+}
+
+.navbar-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    border: 1px solid black;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.minutes {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.minutes-bar {
+    margin: 0 auto;
+    width: 80%;
+    height: 10px;
+    background-color:grey;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.time-bar {
+    width: 20%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* .fas.fa-play {
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 1em;
+    padding: 0.5em;
+} */
 /* NAVBAR */
 
 
+/* footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: strech;
+  height: var(--footer-height);
+}
+footer .footer-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+footer .footer-menu li {
+  display: flex;
+  margin: 5px;
+}
+footer .footer-menu li:hover {
+  background-color: var(--button-bg-color);
+  border-radius: 5px;
+}
+footer .footer-menu li.doble-btn .btn:first-child {
+  margin: 0 10px 0 0;
+}
+footer .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+footer .btn:hover,
+footer .btn:active,
+footer .btn:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+footer .btn.green i {
+  color: var(--button-active-color);
+}
+footer .btn.red {
+  height: 100%;
+  background-color: var(--button-bg-color);
+  color: red;
+}
+footer .footer-right {
+  flex-shrink: 0;
+} */
