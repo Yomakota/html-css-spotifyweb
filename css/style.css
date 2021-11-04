@@ -22,6 +22,7 @@ html {
     width: 100%;
     height: 100vh;
     background-color: red;
+    overflow: hidden;
 }
 
 li {
@@ -38,40 +39,45 @@ li {
 
 main {
     display: flex;
-    height: calc(100% - 100px);               
+    width:100%;
+    height: calc(100% - 90px); 
+    overflow: hidden;              
     background-color: yellow;
 }
 
-.col.left {
+.main-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 10%;
+    width: 230px;
     height:100%;
+    min-height: 480px;
     background-color: violet;
-    overflow-y: scroll;
 }
 
-.col.right {
-    width: 90%;
+.main-content {
+    width: calc(100% - 230px);
     height: 100%;
+    padding-top: calc(90px + 2em);
+    padding-bottom: 2em;
     background-color: blue;
-    overflow-y: scroll;
+    overflow: auto;
 }
 
-.col-right-header {
-    background-color: orange;
-    height: 100px;
-}
+/* MAIN-NAV-TOP */
 
-/* COL-LEFT-TOP */
+.main-nav-top {
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: burlywood;
+}
 
 .menu-side.top img {
     width: 20%;
     vertical-align: middle;
 }
 
-/* COL-LEFT-TOP */
+/* MAIN-NAV-TOP */
 
 /* PLAYLIST */
 
@@ -92,29 +98,45 @@ main {
 
 /* PLAYLIST */
 
-/* COL-LEFT-BOTTOM */
+/* MAIN-NAV-BOTTOM */
 
-.col-left-bottom .install-app img {
+.main-nav-bottom {
+    width: 100%;
+    height: 80px;
+    background-color: cyan;
+}
+
+.main-nav-bottom .install-app img {
     width: 15%;
     vertical-align: middle;
 }
 
-.col-left-bottom .install-app hr {
+.main-nav-bottom .install-app hr {
     border-color: red;
 }
 
-.col-left-bottom .name-artist img {
+.main-nav-bottom .name-artist img {
     width: 20%;
     background-color: grey;
     border-radius: 50%;
     vertical-align: middle;
 }
 
-/* COL-LEFT-BOTTOM */
+/* MAIN-NAV-BOTTOM */
 
-/* UPGRATE-BUTTON */
+/* MAIN-CALL-TO-ACTION */
+
+.main-call-to-action {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: calc(100% - 230px);
+    height: 90px;
+    background-color: rgba(153, 236, 70, 0.479);
+}
     
-.upgrate-btn {
+/* .upgrate-btn {
     position: fixed;
     top: 1.5em;
     right: 0;
@@ -125,10 +147,10 @@ main {
     font-size: 1em;
     font-weight: 700;
     padding: 0.5em 2em;
-    /* text-align: center; */
+    text-align: center;
     text-transform: uppercase;
-}
-/* UPGRATE-BUTTON */
+} */
+/* MAIN-CALL-TO-ACTION */
 
 /* COL-RIGHT */
 
@@ -182,7 +204,8 @@ main {
 /* FOOTER */
 
 footer {
-    height: 100px;
+    width: 100%;
+    height: 90px;
 }
 /* FOOTER */
 
@@ -269,4 +292,21 @@ footer {
 
 .nav-right .minutes {
     width: 70%;
+}
+
+/* MEDIA-QUERY */
+
+@media screen and (max-width: 600px) {
+
+    .main-nav {
+        width: 50px;
+    }
+
+    .main-content {
+        width: calc(100% - 50px);
+    }
+
+    .main-call-to-action {
+        width: calc(100% - 50px);
+    }
 }
