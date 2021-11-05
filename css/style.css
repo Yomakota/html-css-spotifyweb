@@ -90,6 +90,10 @@ main {
     padding: 0.5em;
 }
 
+#logo-small {
+    display: none;
+}
+
 .main-nav-top .main-nav-menu {
     margin: 1em 0;
 }
@@ -351,9 +355,15 @@ footer {
         width: 50px;
     }
 
-    /* .main-nav-top .logo img {
-        width: 400%;
-    } */
+    .main-nav-top .logo img {
+        display: none;
+    }
+
+    #logo-small {
+        display: block;
+        width: 90%;
+        padding: 0;
+    }
 
     .main-nav-menu a {
         display: none;
