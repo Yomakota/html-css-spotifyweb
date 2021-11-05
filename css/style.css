@@ -85,9 +85,12 @@ main {
     height: calc(100% - 80px);
 }
 
+.main-nav-top .logo {
+    padding: 1em;
+}
+
 .main-nav-top .logo img {
     width: 70%;
-    padding: 0.5em;
 }
 
 #logo-small {
@@ -132,6 +135,7 @@ main {
 
 .main-nav-top .playlist-container .playlists {
     height: 80%;
+    padding: .5em 0;
     overflow-y: auto;
 }
 
@@ -189,11 +193,10 @@ main {
     background-color: rgba(153, 236, 70, 0.479);
 }
     
-/* .upgrate-btn {
-    position: fixed;
+.upgrate-btn {
+    position: absolute;
     top: 1.5em;
     right: 0;
-    z-index: 1;
     background-color: transparent;
     border-radius: 500px;
     color: #fff;
@@ -202,8 +205,7 @@ main {
     padding: 0.5em 2em;
     text-align: center;
     text-transform: uppercase;
-} */
-/* MAIN-CALL-TO-ACTION */
+}
 
 /* COL-RIGHT */
 
@@ -360,8 +362,8 @@ footer {
     }
 
     #logo-small {
-        display: block;
-        width: 90%;
+        display: inline-block;
+        width: 30px;
         padding: 0;
     }
 
@@ -372,6 +374,10 @@ footer {
     .main-nav-top .main-nav-menu  img {
         width: 80%;
     }
+
+    .main-nav-top .logo {
+    padding:0;
+}
 
     .main-nav-top .playlist-container {
         display: none;
@@ -386,7 +392,7 @@ footer {
     }
 
     .main-nav-bottom .download img {
-        width: 70%;
+        width: 20px;
     }
 
     .main-nav-bottom .name-artist img {
@@ -395,6 +401,14 @@ footer {
 
     .main-content {
         width: calc(100% - 50px);
+    }
+
+    .main-content .flex {
+        flex-wrap: wrap;
+    }
+
+    .main-content .flex .card {
+        width: 44%;
     }
 
     .main-call-to-action {
