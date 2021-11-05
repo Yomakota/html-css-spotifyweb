@@ -17,6 +17,8 @@ html {
     --bg-color-main: #141922;
     --main-nav-color:#000000;
     --navbar-color:#202020;
+    --header-main:#080B12;
+    --footer:#282828;
 }
 
 .container {
@@ -74,7 +76,7 @@ main {
     height: 100%;
     padding-top: calc(90px + 2em);
     padding-bottom: 2em;
-    background-color: blue;
+    background-color:var(--bg-color-main);
     overflow: auto;
 }
 
@@ -190,7 +192,7 @@ main {
     z-index: 1;
     width: calc(100% - 230px);
     height: 90px;
-    background-color: rgba(153, 236, 70, 0.479);
+    background-color: var(--header-main);
 }
     
 .upgrate-btn {
@@ -269,14 +271,14 @@ footer {
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: green;
+    background-color: var(--footer);
     height: 100%;
     align-items: center;
 }
 
 .navbar-left, .navbar-right {
     width: 20%;
-    border: 1px solid black;
+    border: 1px solid rgb(238, 27, 27);
 }
 
 .navbar-left {
@@ -309,7 +311,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 40%;
-    border: 1px solid black;
+    border: 1px solid rgb(245, 18, 18);
 }
 
 .nav-center {
@@ -408,7 +410,7 @@ footer {
     }
 
     .main-content .flex .card {
-        width: 44%;
+        flex-basis: 40vw;
     }
 
     .main-call-to-action {
