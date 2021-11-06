@@ -336,7 +336,7 @@ footer {
     padding-right: .5em;
 }
 
-.navbar-center {
+.footer-nav .footer-nav-center {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -346,42 +346,55 @@ footer {
     border: 1px solid rgb(245, 18, 18);
 }
 
-.nav-center {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
+.footer-nav .footer-nav-center li {
+    display: inline-block; 
+    padding:0 1em;
 }
 
-.minutes {
+.footer-nav .footer-nav-center button {
+    color: white;
+}
+
+.footer-nav .footer-nav-center .far.fa-play-circle {
+    font-size: 1.7em;
+}
+
+.progress-bar {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.minutes-bar {
+.progress-bar .empty-bar {
     margin: 0 auto;
     width: 80%;
     height: 10px;
     background-color:grey;
-    border: 1px solid black;
     border-radius: 5px;
 }
 
-.time-bar {
+.progress-bar .empty-bar .full-bar {
     width: 20%;
-    height: 5px;
+    height: 10px;
     background-color: white;
     border-radius: 5px;
 }
 
-.nav-right {
-    display: flex; 
-    justify-content: space-around;  
+.footer-nav .footer-nav-right .ftr-nav-right-btn {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.nav-right .minutes {
-    width: 70%;
+.footer-nav .footer-nav-right .ftr-nav-right-btn .fas.fa-desktop {
+    padding: 0 1em;
 }
+
+.footer-nav .footer-nav-right .ftr-nav-right-btn button {
+    color: white;
+}
+    
+
 
 /* MEDIA-QUERY */
 
