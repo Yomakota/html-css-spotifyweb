@@ -32,6 +32,12 @@ html {
     display: flex;
 }
 
+.clear {
+    content:"";
+    display: table;
+    clear: both;
+}
+
 a {
     text-decoration: none;
     color: #5A5A5A;
@@ -42,6 +48,8 @@ li {
 }
 
 button {
+    background-color: transparent;
+    border: none;
     color: #5A5A5A;
 }
 
@@ -74,7 +82,7 @@ main {
 .main-content {
     width: calc(100% - 230px);
     height: 100%;
-    padding-top: calc(90px + 2em);
+    padding-top: calc(90px + 1em);
     padding-bottom: 2em;
     background-color:var(--bg-color-main);
     overflow: auto;
@@ -82,16 +90,16 @@ main {
 
 /* MAIN-NAV-TOP */
 
-.main-nav-top {
+.main-nav .main-nav-top {
     width: 100%;
     height: calc(100% - 80px);
 }
 
-.main-nav-top .logo {
+.main-nav .main-nav-top .logo {
     padding: 1em;
 }
 
-.main-nav-top .logo img {
+.main-nav .main-nav-top .logo img {
     width: 70%;
 }
 
@@ -99,83 +107,83 @@ main {
     display: none;
 }
 
-.main-nav-top .main-nav-menu {
+.main-nav .main-nav-top .main-nav-menu {
     margin: 1em 0;
 }
 
-.main-nav-top .main-nav-menu li {
+.main-nav .main-nav-top .main-nav-menu li {
     margin-bottom: .5em;
 }
 
-.main-nav-top .main-nav-menu  img {
+.main-nav .main-nav-top .main-nav-menu  img {
     width: 10%;
     vertical-align: middle;
 }
 
 /* PLAYLIST */
 
-.main-nav-top .playlist-container {
+.main-nav .main-nav-top .playlist-container {
     height: calc(100% - 250px);
 }
 
-.main-nav-top .playlist-container h2 {
+.main-nav .main-nav-top .playlist-container h2 {
     font-size: 1em;
 }
 
-.main-nav-top .playlist-container .add-to-playlist {
+.main-nav .main-nav-top .playlist-container .add-to-playlist {
     background-color: transparent;
     border:none;
     margin: 0.5em 0;
 }
 
-.main-nav-top .playlist-container .add-to-playlist i {
+.main-nav .main-nav-top .playlist-container .add-to-playlist i {
     font-size: 3em;
     vertical-align: middle;
     filter: invert(1);
     margin-right: .2em;
 }
 
-.main-nav-top .playlist-container .playlists {
+.main-nav .main-nav-top .playlist-container .playlists {
     height: 80%;
     padding: .5em 0;
     overflow-y: auto;
 }
 
-.main-nav-top .playlist-container .playlists li {
+.main-nav .main-nav-top .playlist-container .playlists li {
     margin: 0.5em 0;
 }
 
 /* MAIN-NAV-BOTTOM */
 
-.main-nav-bottom {
+.main-nav .main-nav-bottom {
     width: 100%;
     height: 80px;
 }
 
-.main-nav-bottom .download img {
+.main-nav .main-nav-bottom .download img {
     width: 10%;
     vertical-align: middle;
     margin-right: .5em;
 }
 
-.main-nav-bottom .download {
+.main-nav .main-nav-bottom .download {
     background-color: transparent;
     border:none;
     margin: 0.5em 0;
     text-align: left;
 }
 
-.main-nav-bottom hr {
+.main-nav .main-nav-bottom hr {
     border-color: #5A5A5A;
     margin: .2em 0 1em 0;
 }
 
-.main-nav-bottom .name-artist {
+.main-nav .main-nav-bottom .name-artist {
     font-weight: bold;
     color: white;
 }
 
-.main-nav-bottom .name-artist img {
+.main-nav .main-nav-bottom .name-artist img {
     width: 10%;
     background-color: grey;
     border-radius: 50%;
@@ -183,9 +191,9 @@ main {
     margin-right: .5em; 
 }
 
-/* MAIN-CALL-TO-ACTION */
+/* MAIN-CONTENT */
 
-.main-call-to-action {
+.main-content .main-call-to-action {
     position: fixed;
     top: 0;
     right: 0;
@@ -195,11 +203,12 @@ main {
     background-color: var(--header-main);
 }
     
-.upgrate-btn {
+.main-content .main-call-to-action .upgrate-btn {
     position: absolute;
     top: 1.5em;
     right: 0;
     background-color: transparent;
+    border: 1px solid white;
     border-radius: 500px;
     color: #fff;
     font-size: 1em;
@@ -209,54 +218,80 @@ main {
     text-transform: uppercase;
 }
 
-/* COL-RIGHT */
-
-.nav-col-right {
+.main-content .nav-menu-content {
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: .5em;
 }
 
-.nav-col-right li {
+.main-content .nav-menu-content li {
     display: inline-block;
     margin: 0.5em;
 }
 
-.card {
-    margin: 0.5em;
+.main-content .list {
+    padding: 0 1em;
 }
 
-.card .card-img {
+.main-content .list h1 {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+}
+
+.main-content .list.create-for {
+    width:100%;
+}
+
+.main-content .list.popular-artist {
+    width:100%;
+}
+
+.main-content .list .album {
+    float:left;
+    margin: .5em;
+    width: calc(100% / 6 - 1em);
+}
+
+.main-content .list .album .album-image img{
+    width:100%;
+}
+
+.main-content .list .album .album-image {
     position: relative;
 }
 
-.card .card-img img {
-    width: 100%;
-}
-
-.card .text-card {
+.main-content .list .album .album-title {
+    font-size: .7em;
+    margin: 1em 0;
     text-align: center;
 }
 
-.far.fa-play-circle.over {
+.main-content .list .album .album-title .album-subtitle {
+    margin: .5em 0;
+}
+
+.main-content .list.popular-artist img {
+    border-radius: 50%;
+}
+
+.main-content .list .album .album-image .far.fa-play-circle.over {
     display: none;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);padding: 0.2em;
+    transform: translate(-50%, -50%);
+    padding: 0.2em;
     font-size: 3em;
     color: white;
 }
 
-.card .card-img:hover img {
+.main-content .list .album .album-image:hover img {
     opacity: 0.5;
 }
 
-.card .card-img:hover .far.fa-play-circle.over {
+.main-content .list .album .album-image:hover .far.fa-play-circle.over {
     display: block;
 }
-/* COL-RIGHT */
-    
-/* MAIN */
 
 /* FOOTER */
 
@@ -264,45 +299,41 @@ footer {
     width: 100%;
     height: 90px;
 }
-/* FOOTER */
 
 /* NAVBAR */
 
-.navbar {
+.footer-nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--footer);
     height: 100%;
-    align-items: center;
 }
 
-.navbar-left, .navbar-right {
-    width: 20%;
+.footer-nav .footer-nav-left, .footer-nav .footer-nav-right {
     border: 1px solid rgb(238, 27, 27);
+    width: 230px;
+    height: 100%;
 }
 
-.navbar-left {
+.footer-nav .footer-nav-left {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.nav-card {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.footer-nav .footer-nav-left .ftr-nav-album img {
+    width: 40px;    
+    vertical-align: text-bottom;
 }
 
-.nav-left-btn {
-    display: flex;
-    padding: 1em;
+.footer-nav .footer-nav-left .ftr-nav-album .ftr-album-title {
+    display: inline-block;
+    font-size: .7em;    
 }
 
-.navbar .navbar-left .img {
-    width: 30%;
-}
-
-.img img {
-    width:100%;
+.footer-nav .footer-nav-left .ftr-left-btn li {
+    display: inline;
+    padding-right: .5em;
 }
 
 .navbar-center {
@@ -311,6 +342,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     width: 40%;
+    height: 100%;
     border: 1px solid rgb(245, 18, 18);
 }
 
@@ -359,7 +391,7 @@ footer {
         width: 50px;
     }
 
-    .main-nav-top .logo img {
+    .main-nav .main-nav-top .logo img {
         display: none;
     }
 
@@ -369,51 +401,60 @@ footer {
         padding: 0;
     }
 
-    .main-nav-menu a {
+    .main-nav .main-nav-menu a {
         display: none;
     }
 
-    .main-nav-top .main-nav-menu  img {
+    .main-nav .main-nav-top .main-nav-menu  img {
         width: 80%;
     }
 
-    .main-nav-top .logo {
+    .main-nav .main-nav-top .logo {
     padding:0;
 }
 
-    .main-nav-top .playlist-container {
+    .main-nav .main-nav-top .playlist-container {
         display: none;
     }
 
-    .main-nav-bottom span {
+    .main-nav .main-nav-bottom span {
         display: none;
     }
 
-    .main-nav-bottom hr {
+    .main-nav .main-nav-bottom hr {
         display: none;
     }
 
-    .main-nav-bottom .download img {
+    .main-nav .main-nav-bottom .download img {
         width: 20px;
     }
 
+    .main-nav-bottom .name-artist {
+        width: 250px;
+    }
+
     .main-nav-bottom .name-artist img {
-        width: 80%;
+        width: 100%;
     }
 
     .main-content {
         width: calc(100% - 50px);
     }
 
-    .main-content .flex {
+    .main-content .album{
+    float:left;
+    width: calc(100% / 2 - 1em);
+    }
+
+    /* .main-content .flex {
         flex-wrap: wrap;
     }
 
     .main-content .flex .card {
         flex-basis: 44%;
-    }
+    } */
 
-    .main-call-to-action {
+    .main-content .main-call-to-action {
         width: calc(100% - 50px);
     }
 }
