@@ -13,11 +13,22 @@ html {
 }
 
 :root {
-    --bg-color-main: #141922;
-    --main-nav-color:#000000;
-    --navbar-color:#202020;
-    --header-main:#080B12;
-    --footer:#282828;
+    /* colors */
+    --font-color: rgba(255, 255, 255, 0.4);
+    --a-color: rgba(255, 255, 255, 0.4);
+    --a-hover-color: rgba(255, 255, 255, 1);
+    --main-content-color: #10141B;
+    --call-to-action-bg-color: rgba(0, 0, 0, 0.4);
+    --footer: #202020;
+    --active: greenyellow;
+
+    /* sizes */
+    --main-nav-md-width-large: 230px;
+    --main-nav-min-height: 480px;
+    --main-nav-xs-width-large: 50px;
+    --nav-bottom-height: 80px;
+    --call-to-action-height: 90px;
+    --footer-height: 90px;
 }
 
 .container {
@@ -35,13 +46,13 @@ html {
 
 a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--a-color);
 }
 
 a:hover, 
 a:active, 
 a:focus {
-    color: rgba(255, 255, 255, 1);
+    color: var(--a-hover-color);
 }
 
 ul {
@@ -51,14 +62,12 @@ ul {
 button {
     background-color: transparent;
     border: none;
-    color: #5A5A5A;
+    color: var(--a-color);
 }
 
-.up-case {
-    text-transform: uppercase;
-}
-
-h1, h2, h3 {
+h1, 
+h2, 
+h3 {
     color: white;
 }
 
@@ -67,23 +76,24 @@ h1, h2, h3 {
 main {
     display: flex;
     width:100%;
-    height: calc(100% - 90px); 
+    height: calc(100% - var(--footer-height)); 
     overflow: hidden;              
 }
 
+/* MAIN-NAV */
+
 .main-nav {
-    width: 230px;
+    width: var(--main-nav-md-width-large);
     height:100%;
-    min-height: 480px;
+    min-height: var(--main-nav-min-height);
     padding: 0.5em;
 }
-
 
 /* MAIN-NAV-TOP */
 
 .main-nav .main-nav-top {
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100% - var(--nav-bottom-height));
     overflow: hidden;
 }
 
@@ -104,12 +114,8 @@ main {
     margin-bottom: 2em;
 }
 
-.main-nav .main-nav-top .main-nav-menu li.active a {
-    color:white;
-}
-
 .main-nav .main-nav-top .main-nav-menu li.active {
-    border-left: 3px solid greenyellow;
+    border-left: 3px solid var(--active);
 }
 
 .main-nav .main-nav-top .main-nav-menu li {
@@ -118,13 +124,17 @@ main {
     margin-bottom: .2em;
 }
 
+.main-nav .main-nav-top .main-nav-menu li.active img {
+    opacity: .8;
+}
+
 .main-nav .main-nav-top .main-nav-menu img {
     width: 30px;
     vertical-align: middle;
     opacity: .7;
 }
 
-.main-nav .main-nav-top .main-nav-menu li:hover  img {
+.main-nav .main-nav-top .main-nav-menu li:hover img {
     opacity: 1;
 }
 
@@ -138,6 +148,7 @@ main {
 .main-nav .main-nav-top .playlist-container h2 {
     font-size: 1em;
     margin-bottom: .5em;
+    text-transform: uppercase;
 }
 
 .main-nav .main-nav-top .playlist-container .add-to-playlist i {
@@ -186,7 +197,7 @@ main {
 }
 
 .main-nav .main-nav-bottom hr {
-    border-color: #5A5A5A;
+    border-color: var(--a-color);
     margin: .5em 0 1em 0;
     width:100%;
 }
@@ -209,22 +220,24 @@ main {
 /* MAIN-CONTENT */
 
 .main-content {
-    width: calc(100% - 230px);
+    width: calc(100% - var(--main-nav-md-width-large));
     height: 100%;
-    padding-top: calc(90px + 1em);
+    padding-top: calc(var(--call-to-action-height) + 2em);
     padding-bottom: 2em;
-    background-color:var(--bg-color-main);
+    background-color: var(--main-content-color);
     overflow: auto;
 }
+
+/* MAIN-CALL-TO-ACTION */
 
 .main-content .main-call-to-action {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
-    width: calc(100% - 230px);
-    height: 90px;
-    background-color: var(--header-main);
+    width: calc(100% - var(--main-nav-md-width-large));
+    height: var(--call-to-action-height);
+    background-color: var(--call-to-action-bg-color);
 }
     
 .main-content .main-call-to-action .upgrate-btn {
@@ -245,6 +258,8 @@ main {
     padding: 1em 2.5em;
 }
 
+/* MAIN-CONTENT-NAV-MENU */
+
 .main-content .nav-menu-content {
     text-align: center;
     text-transform: uppercase;
@@ -263,13 +278,15 @@ main {
 }
 
 .main-content .nav-menu-content li.select:after {
-  content : "";
-  position: absolute;
-  left    : 33%;
-  bottom  : 0;
-  width   : 35%; 
-  border-bottom: 3px solid greenyellow;
+    content : "";
+    position: absolute;
+    left    : 33%;
+    bottom  : 0;
+    width   : 35%; 
+    border-bottom: 3px solid var(--active);
 }
+
+/* MAIN-CONTENT-LIST-ALBUM */
 
 .main-content .list {
     padding: 0 1em;
@@ -334,7 +351,7 @@ main {
 }
 
 .main-content .list .album .album-image:hover img {
-    opacity: 0.5;
+    opacity: .5;
 }
 
 .main-content .list .album .album-image:hover .far.fa-play-circle.over {
@@ -345,7 +362,7 @@ main {
 
 footer {
     width: 100%;
-    height: 90px;
+    height: var(--footer-height);
 }
 
 /* NAVBAR */
@@ -358,7 +375,6 @@ footer {
 }
 
 .footer-nav .footer-nav-left, .footer-nav .footer-nav-right {
-    border: 1px solid rgb(238, 27, 27);
     width: 20%;
     height: 100%;
 }
@@ -380,7 +396,7 @@ footer {
 }
 
 .footer-nav .footer-nav-left .ftr-nav-album .ftr-album-title .ftr-album-song:hover {
-    color: white;
+    color: var(--a-hover-color);
     text-decoration: underline;
     cursor: pointer;
 }
@@ -390,13 +406,9 @@ footer {
     padding-right: .5em;
 }
 
-.footer-nav .footer-nav-left .ftr-left-btn .far.fa-heart:hover {
-    color: white;
-    cursor: pointer;
-}
-
+.footer-nav .footer-nav-left .ftr-left-btn .far.fa-heart:hover, 
 .footer-nav .footer-nav-left .ftr-left-btn .far.fa-folder:hover {
-    color: white;
+    color: var(--a-hover-color);
     cursor: pointer;
 }
 
@@ -407,7 +419,6 @@ footer {
     align-items: center;
     width: 45%;
     height: 100%;
-    border: 1px solid rgb(245, 18, 18);
 }
 
 .footer-nav .footer-nav-center li {
@@ -415,7 +426,7 @@ footer {
     padding:0 1em;
 }
 
-.footer-nav .footer-nav-center button {
+.footer-nav .footer-nav-center button i {
     color: white;
     cursor: pointer;
 }
@@ -474,7 +485,7 @@ footer {
 }
 
 .footer-nav .progress-bar .empty-bar .full-bar:hover  {
-    background-color: greenyellow;
+    background-color: var(--active);
     cursor: pointer;
 }
 
@@ -494,7 +505,7 @@ footer {
 }
 
 .footer-nav-right #white-dot {
-    left: 50%;
+    left: 60%;
     bottom: -2.5px;
     width: 15px;
     height: 15px;
@@ -502,7 +513,23 @@ footer {
     
 /* MEDIA-QUERY */
 
-@media screen and (max-width: 1100px) and (min-width:700px) {
+/* MEDIA-QUERY-MD */
+
+@media screen and (max-width: 1100px) {
+
+    .main-content .nav-menu-content {
+        font-size: 1em;
+    }
+    
+    .main-content .nav-menu-content ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-content .nav-menu-content li {
+        padding: 1em;
+    }
 
     .main-content .list .album {
         float:left;
@@ -514,28 +541,15 @@ footer {
         display: flex;
         flex-wrap: wrap;
     }
-
-    .main-content .nav-menu-content ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .main-content .nav-menu-content li {
-        padding: 1.2em;
-    }
-
 }
 
-@media screen and (max-width: 700px) and (min-width:600px) {
+/* MEDIA-QUERY-S */
 
-    /* .main-content .nav-menu-content {
-        padding: 0 1.2em;
-    } */
+@media screen and (max-width: 700px) and (min-width: 600px) {
 
-    /* .main-content .nav-menu-content li {
+    .main-content .nav-menu-content li {
         padding: .5em;
-    } */
+    }
 
     .main-content .list .album {
         float:left;
@@ -543,12 +557,24 @@ footer {
         width: calc(100% / 2 - 1em);
     }
 
+    .footer-nav .footer-nav-left, .footer-nav .footer-nav-right {
+        width: 30%;
+        height: 100%;
+    }
+
+    .footer-nav .footer-nav-left .ftr-left-btn li {
+    display: block;
+    padding-right: .5em;
 }
+
+}
+
+/* MEDIA-QUERY-XS */
 
 @media screen and (max-width: 600px) {
 
     .main-nav {
-        width: 50px;
+        width: var(--main-nav-xs-width-large);
     }
 
     .none {
@@ -600,6 +626,11 @@ footer {
     }
 
     .main-content .main-call-to-action {
-        width: calc(100% - 50px);
+        width: calc(100% - var(--main-nav-xs-width-large));
+    }
+
+    .footer-nav .footer-nav-left, .footer-nav .footer-nav-right {
+        width: 30%;
+        height: 100%;
     }
 }
